@@ -146,9 +146,9 @@ void play(){
 						break;
 					case 2:
 						if(mc2){
-								speech("Factory Owner", "Thanks to you, we are back in business");
-								break;
-							}
+							speech("Factory Owner", "Thanks to you, we are back in business");
+							break;
+						}
 						if(bf_f1){
 							speech("Factory Owner", "Get out of here!");
 							break;
@@ -422,7 +422,7 @@ void play(){
 		}
 	}
 }
-bool cfte = true; // cheats for testing enabled? -- disabled for main play, enable for testing stuff without wasting time
+bool cfte = false; // cheats for testing enabled? -- disabled for main play, enable for testing stuff without wasting time
 void settings(){
 	stcl();
 	while(true){

@@ -1,5 +1,4 @@
 #include <stdbool.h>
-char cfc[100];
 int ante;
 int los(char *s);
 int loia(int ia[100]);

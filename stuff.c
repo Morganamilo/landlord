@@ -4,7 +4,6 @@
 #include <time.h>
 #include <stdbool.h>
 #include <unistd.h>
-char cfc[100] = "clear"; // clear function command
 int ante = 1; // ante = animate text -- can be toggled in settings
 int los(char *s){
 	int i = 0;
@@ -21,7 +20,11 @@ bool iaco(int array[256], int integer){
 	return false;
 }
 void stcl(){
-	system(cfc);
+	#ifdef __WIN32
+		system("cls");
+	#else
+		system("clear");
+	#endif
 }
 void speech(char cn[15], char speech[81]){
 	stcl();

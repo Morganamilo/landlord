@@ -428,7 +428,7 @@ void settings(){
 	while(true){
 		stcl();
 		printf("0 to exit\n\n");
-		printf("1) Clear Command: %s\n", cfc);
+		printf("1) Comming soon\n");
 		printf("2) FAKE OPTION\n");
 		printf("3) Animate Text : %i\n", ante);
 		if(cfte){
@@ -444,12 +444,6 @@ void settings(){
 		switch(opt5){
 			case 0:
 				return;
-			case 1:
-				printf("Note:\n   \"clear\" for unix like systems\n   \"cls\" for dos systems (windows)\n\nEnter new value:\n> ");
-				char nv1[100];
-				scanf("%s", &nv1);
-				strcpy(cfc, nv1);
-				break;
 			case 2:
 				while(true){
 					printf("FAKE OPTION IS FAKE! - YOU SHOULD NOT HAVE CHOSEN IT\n");

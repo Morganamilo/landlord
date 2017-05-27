@@ -1,5 +1,5 @@
 # Landlord
-Landlord is a cool text-based puzzle and tactic game. The game is in *early alpha* so be accepting of any bugs or glitches.
+Landlord is a cool text-based puzzle and tactic game. The game is in **early alpha** so be accepting of any bugs or glitches.
 #### Building
 There are two ways to build it
 1) Run the makefile which will do it all for you

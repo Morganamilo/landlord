@@ -1,0 +1,1 @@
+int isNum(char c);

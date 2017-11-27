@@ -3,7 +3,7 @@
 #include "player.h"
 #include "util.h"
 
-extern char mapBuffer[1024];
+char mapBuffer[1024];
 
 void clearBuffer(){
 	int i;
@@ -57,6 +57,8 @@ void renderBuffer(){
 		}else{
 			if(isNum(mapBuffer[i])){
 				printf(".");
+			}else if(isBE(mapBuffer[i])){
+				printf("^");
 			}else{
 				printf("%c", mapBuffer[i]);
 			}
@@ -92,8 +94,8 @@ void loadMap(int mapId){
 					"#           .            #\n"
 					"#           .            #\n"
 					"#           . #Factory#  #\n"
-					"#  #Pub#    . ###(^)###  #\n"
-					"#  #(^)#    .     .      #\n"
+					"#  #Pub#    . ###(})###  #\n"
+					"#  #({)#    .     .      #\n"
 					"#    .      .     .      #\n"
 					"#    ..............      #\n"
 					"#            .           #\n"
@@ -106,7 +108,7 @@ void loadMap(int mapId){
 					"#                 .      #\n"
 					"#                 .      #\n"
 					"#  #Shop#         .      #\n"
-					"#  ##(^)#   .............3\n"
+					"#  ##({)#   .............3\n"
 					"#     .     .            #\n"
 					"2............            #\n"
 					"#           .            #\n"

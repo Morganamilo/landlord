@@ -1,3 +1,6 @@
+
+extern char name[32];
+
 int getX();
 void setX(int newZ);
 

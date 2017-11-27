@@ -1,4 +1,3 @@
-char mapBuffer[1024];
 
 void clearBuffer();
 void writeBuffer(char map[1024]);

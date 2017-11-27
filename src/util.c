@@ -7,3 +7,20 @@ int isNum(char c){
 		return 0;
 	}
 }
+
+/*
+ * I know this is the shitty way to do it,
+ * but I did it this way anyway, get over it.
+*/
+int isBE(char c){
+	if(c == '{')
+		return 1;
+	if(c == '}')
+		return 1;
+	if(c == '~')
+		return 1;
+	if(c == '|')
+		return 1;
+	
+	return 0;
+}

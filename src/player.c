@@ -5,6 +5,8 @@ int y = 0;
 char pch = '&';
 int health = 10;
 
+char name[32];
+
 int getX(){
 	return x;
 }

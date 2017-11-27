@@ -3,11 +3,15 @@
 #include "mapping.h"
 #include "player.h"
 #include "game.h"
+#include "util.h"
 
 int running = 1;
 int map = 1;
 
 void startGame(){
+	running = 1;
+	map = 1;
+	clearDisplay();
 	loadMap(map);
 	setX(13);
 	setY(9);

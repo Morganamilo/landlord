@@ -13,8 +13,8 @@ void startGame(){
 	map = 1;
 	clearDisplay();
 	loadMap(map);
-	setX(13);
-	setY(9);
+	px = 13;
+	py = 9;
 	// Main game loop
 	while(running){
 		topDisplay();
@@ -22,8 +22,8 @@ void startGame(){
 		char c = getchar();
 		
 		int movementCancelled = 0;
-		int resultY = getY();
-		int resultX = getX();
+		int resultY = py;
+		int resultX = px;
 		char cap;
 		
 		switch(c){
@@ -55,7 +55,7 @@ void startGame(){
 				movementCancelled = 1;
 				map = 2;
 				loadMap(map);
-				setY(9);
+				py = 9;
 			}
 			
 			
@@ -65,7 +65,7 @@ void startGame(){
 				movementCancelled = 1;
 				map = 1;
 				loadMap(map);
-				setY(1);
+				py = 1;
 			}
 		}
 		
@@ -73,8 +73,8 @@ void startGame(){
 		// Move
 		if(cap == ' ' || cap == '.'){
 			if(! movementCancelled){
-				setX(resultX);
-				setY(resultY);
+				px = resultX;
+				py = resultY;
 			}
 		}
 	}

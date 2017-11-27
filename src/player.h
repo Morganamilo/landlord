@@ -1,13 +1,8 @@
 
-extern char name[32];
 
-int getX();
-void setX(int newZ);
+extern int px;
+extern int py;
+extern char pch;
+extern int phealth;
 
-int getY();
-void setY(int newY);
-
-char getPCh();
-
-int getHealth();
-void setHealth(int newHealth);
+extern char pname[32];

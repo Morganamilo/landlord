@@ -39,8 +39,6 @@ char getBufferCharacter(int mx, int my){
 }
 
 void renderBuffer(){
-	int px = getX();
-	int py = getY();
 	int i;
 	int cx = 0;	// Current x
 	int cy = 0;	// Current y
@@ -53,7 +51,7 @@ void renderBuffer(){
 		}
 		if(! mapBuffer[i]) break;
 		if(cx == px && cy == py){
-			printf("\e[38;5;3m%c\e[0m", getPCh());
+			printf("\e[38;5;3m%c\e[0m", pch);
 		}else{
 			if(isNum(mapBuffer[i])){
 				printf(".");

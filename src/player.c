@@ -1,34 +1,8 @@
 #include "includes.h"
 
-int x = 0;
-int y = 0;
+int px = 0;
+int py = 0;
 char pch = '&';
-int health = 10;
+int phealth = 10;
 
-char name[32];
-
-int getX(){
-	return x;
-}
-void setX(int newX){
-	x = newX;
-}
-
-int getY(){
-	return y;
-}
-void setY(int newY){
-	y = newY;
-}
-
-char getPCh(){
-	return pch;
-}
-
-
-int getHealth(){
-	return health;
-}
-void setHealth(int newHealth){
-	health = newHealth;
-}
+char pname[32];

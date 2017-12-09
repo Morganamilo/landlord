@@ -12,9 +12,15 @@ void startGame(){
 	running = 1;
 	map = 1;
 	clearDisplay();
+	topDisplay();
 	loadMap(map);
 	px = 13;
 	py = 9;
+	renderBuffer();
+	speech("Landlord", "Hello and welcome to Landlord!");
+	speech("Landlord", "I am the landlord... of the world.");
+	speech("Landlord", "The place you can start off at is Sakura village"); // Sakura is actually Japanese for "Cherry Blossom"
+	speech("Landlord", "You can get money from doing jobs for villagers");
 	// Main game loop
 	while(running){
 		topDisplay();

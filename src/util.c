@@ -37,8 +37,8 @@ int los(char str[]){ // Length of string
 }
 
 void speech(char npc[], char message[50]){	// Maximum of 50 characters for the message
-	printf("\t%s:\n", npc);
-	printf("\n##################################################\n\n"); // 50 characters across
+	printf("\n\t%s:\n", npc);
+	printf("##################################################\n\n"); // 50 characters across
 	
 	printf("##################################################\n"); // same here
 	

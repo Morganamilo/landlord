@@ -6,11 +6,11 @@
 #include "util.h"
 
 int running = 1;
-int map = 1;
+int map = 10;
 
 void startGame(){
 	running = 1;
-	map = 1;
+	map = 10;
 	clearDisplay();
 	topDisplay();
 	loadMap(map);
@@ -51,7 +51,7 @@ void startGame(){
 				break;
 		}
 		cap = getBufferCharacter(resultX, resultY);
-		if(map == 1){
+		if(map == 10){
 			//
 			if(cap == '0'){
 				movementCancelled = 1;
@@ -59,17 +59,17 @@ void startGame(){
 			}
 			if(cap == '1'){
 				movementCancelled = 1;
-				map = 2;
+				map = 20;
 				loadMap(map);
 				py = 9;
 			}
 			
 			
 			
-		}else if(map == 2){
+		}else if(map == 20){
 			if(cap == '1'){
 				movementCancelled = 1;
-				map = 1;
+				map = 10;
 				loadMap(map);
 				py = 1;
 			}

@@ -87,7 +87,7 @@ int getWidth(){ // For this to work properly all the lines must be the exact sam
 
 void loadMap(int mapId){
 	switch(mapId){
-		case 1:
+		case 10:
 			writeBuffer(	"############1#############\n"
 					"#           .            #\n"
 					"#           .            #\n"
@@ -100,7 +100,7 @@ void loadMap(int mapId){
 					"#            .           #\n"
 					"#############0############\n");
 			break;
-		case 2:
+		case 20:
 			writeBuffer(	"##################4#######\n"
 					"#                 .      #\n"
 					"#                 .      #\n"

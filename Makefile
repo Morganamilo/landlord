@@ -1,14 +1,47 @@
-all:
-	gcc -c src/main.c -o bin/main.o
-	gcc -c src/display.c -o bin/display.o
-	gcc -c src/mapping.c -o bin/mapping.o
-	gcc -c src/player.c -o bin/player.o
-	gcc -c src/game.c -o bin/game.o
-	gcc -c src/puzzles.c -o bin/puzzles.o
-	gcc -c src/util.c -o bin/util.o
-	gcc bin/*.o -o landlord
-install:
-	cp landlord /usr/local/bin/
+ifeq ($(PREFIX),)
+    PREFIX := /usr/local
+endif
+
+CC		= gcc
+LINK		= gcc 
+
+SRCDIR		= src
+OBJDIR		= obj
+TARGETDIR	= bin
+
+INC		= 
+LIB		= 
+
+TARGET		= landlord
+
+SOURCES		= $(wildcard $(SRCDIR)/*.c)
+HEADERS		= $(wildcard $(SRCDIR)/*.h)
+OBJECTS		= $(SOURCES:src/%.c=obj/%.o)
+
+.PHONY: all install uninstall clean
+
+all: $(TARGETDIR)/$(TARGET)
+
+$(TARGETDIR)/$(TARGET): $(OBJECTS) | $(TARGETDIR)
+
+$(OBJDIR)/%.o: $(SRCDIR)/%.c $(HEADERS) | $(OBJDIR)
+	$(CC) $(CFLAGS) $(CFLAGS) $(INC) -c -o $@ $<
+
+$(TARGETDIR)/$(TARGET): $(OBJECTS)
+	$(LINK) -o $(TARGETDIR)/$(TARGET) $^ $(LIB)
+
+$(OBJDIR):
+	mkdir $(OBJDIR)
+
+$(TARGETDIR):
+	mkdir $(TARGETDIR)
+
+install: $(TARGETDIR)/$(TARGET)
+	install -Dm755 $(TARGETDIR)/$(TARGET) $(PREFIX)/bin/$(TARGET)
+
+uninstall:
+	rm -f $(PREFIX)/bin/$(TARGET)
+
 clean:
-	rm -r bin/*.o
-	rm landlord
+	rm -rf $(OBJDIR)
+	rm -rf ${TARGETDIR}
